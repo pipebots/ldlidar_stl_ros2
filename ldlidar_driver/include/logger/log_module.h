@@ -19,7 +19,7 @@
 #define  __LOGMODULE_H_
 
 
-#define LINUX
+#define LINUX 1
 
 #define ENABLE_LOG_DIS_OUTPUT
 
@@ -37,7 +37,7 @@
 #ifndef LINUX
 #include <windows.h>
 #else
-//#include <pthread.h>
+#include <pthread.h>
 #include <stdarg.h>
 #define printf_s(fileptr,str)  (fprintf(fileptr,"%s",str))
 #define __in
